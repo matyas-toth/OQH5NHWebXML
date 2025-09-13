@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantárgyak | Adatbázis rendszerek 1.</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('./assets/bg.jpg');
+        background-size: cover;
+    }
+
+    .content {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .kep {
+        object-fit: cover;
+        object-position: 50% 70%;
+        width: 100%;
+        height: 25vh;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .menupontok {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75%;
+        align-items: center;
+    }
+
+    .video {
+        width: 25%;
+        margin-top: 100px;
+        border-radius: 10px;
+    }
+
+    .szoveges-tartalom {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: 100px;
+    }
+
+    .szoveges-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav-cim {
+        font-size: 20px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .nav-cim:hover {
+        color: #444444;
+        cursor: pointer;
+    }
+
+    .nav-cim-highlight {
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .vissza-gomb {
+        font-size: 20px;
+        text-decoration: underline;
+        font-weight: bold;
+        color: #444444;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <img src="./assets/infoep.jpg" alt="infoep" class="kep">
+        <div class="menupontok">
+            <a href="database.html">
+                <p class="nav-cim nav-cim-highlight">Adatbázis rendszerek</p>
+            </a>
+            <a href="webtech1.html">
+                <p class="nav-cim">Web technológiák 1.</p>
+            </a>
+            <a href="xml.html">
+                <p class="nav-cim">Webes adatkezelő környezetek</p>
+            </a>
+        </div>
+
+        <div class="szoveges-wrapper">
+            <div class="szoveges-tartalom">
+                <h2><strong>Adatbázis rendszerek</strong></h2>
+                <p>Oktató: Dr. Kovács László<br>Kredit: 5</p>
+                <h3>Tematika</h3>
+                <ul>
+                    <li>Adatkezelés alapfogalmai, adatstruktúra alapok, Adatperzisztencia szintjei: file, táblázatok és
+                        adatbázisok. C file kezelés,Táblázatkezelő alapú perzisztencia, Excelben.</li>
+                    <li>VBA programozás alapjai Excelben; VBA alkalmazások OOP modellje. Excel adatkezelés haladó
+                        programozása, adatkezelési algoritmusok. Algoritmusok hatékonyság elemzése.</li>
+                    <li>Az adatbáziskezelés alapfogalmai; az adatbázis rendszer DB fejlesztés lépései, A szemantikai
+                        modellek áttekintése, ER adatmodell, EER és UML adatmodell</li>
+                    <li>A relációs adatmodell áttekointése, A relációs struktúra (mező, reláció, DB) és integritási
+                        feltételek bemutatása. Az ER modell konverziója relációs modellre. SQL DDL elemei</li>
+                    <li>A relációs adatmodell műveleti része, relációs algebra elemei: szelekció, projekció, join,
+                        aggregáció, csoportképzés, kiterjesztés, halmazműveletek SQL DML és DQL alapok.</li>
+                    <li> SQL SELECT utasítás alapelemei elemei, kapcsolódás a relációs algebrához, az SQL SELECT
+                        szintaktikája. a SELECT utasítás további elemei. al-SELECT kezelése</li>
+                    <li>Az SQL további elemei: speciális függvények adátum kezelésre, sztring kezelésre. Karakter
+                        kódkészletek.Tranzakció elemei, VIEW mechanizmus működése és parancsai</li>
+                    <li>Az adatmodellezés problémái, anomáliák áttekintése. A mezők közötti függőségek szerepe.
+                        Normálformák. Dekompozíciós szabályok, normalizálás lépései</li>
+                    <li>Az adatbáziskezelők fizikai architektúrája. A DBMS rendszerek működése: A fizikai szintű
+                        tárolási
+                        módszerek, indexelés áttekintése. B-fa index működése.</li>
+                    <li> Adatbázisok védelmi modelljei, A DAC védelmi modell, szerepkörök alkalmazása; a MAC védelmi
+                        modell
+                        elemei. SQL védelmi parancsok használata</li>
+                    <li> Esettanulmány: MySQL. .A mySQL RDBMS architektúra elemei, adminisztrációs alapok, mySQL SQL
+                        áttekintése, alap SQL parancsok használatának bemutatása</li>
+                    <li>Esettanulmány: SQLLite. Az SQLite DBMS architektúra elemei, adminisztrációs alapok, SQLite SQL
+                        áttekintése</li>
+                    <li>
+                        Esettanulmány: Oracle APEX keretrendszer. Az APEX DBMS architektúra elemei, adminisztrációs
+                        alapok,
+                        APEX SQL áttekintése
+
+                    </li>
+                </ul>
+            </div>
+            <img src="./assets/database.jpg" alt="database" width="50%" height="50%">
+        </div>
+        <div class="footer">
+            <p>Forrás: https://iit.uni-miskolc.hu/</p>
+            <p>Tóth Mátyás, OQH5NH, 2025</p>
+            <p style="width: 200px;"></p>
+        </div>
+        <a href="index.html" class="vissza-gomb">Vissza a főoldalra</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantárgyak | Kezdőlap</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('./assets/bg.jpg');
+        background-size: cover;
+    }
+
+    .content {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .kep {
+        object-fit: cover;
+        object-position: 50% 70%;
+        width: 100%;
+        height: 25vh;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .menupontok {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75%;
+        align-items: center;
+    }
+
+    .video {
+        width: 25%;
+        margin-top: 100px;
+        border-radius: 10px;
+    }
+
+    .szoveges-tartalom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: 100px;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav-cim {
+        font-size: 20px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .nav-cim:hover {
+        color: #444444;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <img src="./assets/infoep.jpg" alt="infoep" class="kep">
+        <div class="menupontok">
+            <a href="database.html">
+                <p class="nav-cim">Adatbázis rendszerek</p>
+            </a>
+            <a href="webtech1.html">
+                <p class="nav-cim">Web technológiák 1.</p>
+            </a>
+            <a href="xml.html">
+                <p class="nav-cim">Webes adatkezelő környezetek</p>
+            </a>
+        </div>
+        <video src="./assets/react_in_100_seconds.mp4" controls class="video"></video>
+        <div class="szoveges-tartalom">
+            <h3><strong>Üdvözlöm a honlapon!</strong></h3>
+            <p>Ezen a weboldalon megtaláljuk 3 tantárgy leírását.</p>
+        </div>
+        <div class="footer">
+            <p>Forrás: https://www.youtube.com/</p>
+            <p>Tóth Mátyás, OQH5NH, 2025</p>
+            <p style="width: 200px;"></p>
+        </div>
+    </div>
+</body>
+
+</html>

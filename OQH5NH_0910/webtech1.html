@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantárgyak | Web technológiák 1.</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('./assets/bg.jpg');
+        background-size: cover;
+    }
+
+    .content {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .kep {
+        object-fit: cover;
+        object-position: 50% 70%;
+        width: 100%;
+        height: 25vh;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .menupontok {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75%;
+        align-items: center;
+    }
+
+    .video {
+        width: 25%;
+        margin-top: 100px;
+        border-radius: 10px;
+    }
+
+    .szoveges-tartalom {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: 100px;
+    }
+
+    .szoveges-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav-cim {
+        font-size: 20px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .nav-cim:hover {
+        color: #444444;
+        cursor: pointer;
+    }
+
+    .nav-cim-highlight {
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .vissza-gomb {
+        font-size: 20px;
+        text-decoration: underline;
+        font-weight: bold;
+        color: #444444;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <img src="./assets/infoep.jpg" alt="infoep" class="kep">
+        <div class="menupontok">
+            <a href="database.html">
+                <p class="nav-cim">Adatbázis rendszerek</p>
+            </a>
+            <a href="webtech1.html">
+                <p class="nav-cim nav-cim-highlight">Web technológiák 1.</p>
+            </a>
+            <a href="xml.html">
+                <p class="nav-cim">Webes adatkezelő környezetek</p>
+            </a>
+        </div>
+
+        <div class="szoveges-wrapper">
+            <div class="szoveges-tartalom">
+                <h2><strong>Web technológiák 1.</strong></h2>
+                <p>Oktató: Agárdi Anita<br>Kredit: 5</p>
+                <h3>Tematika</h3>
+                <ul>
+                    <li>Hálózati alapfogalmak, protokollok
+                    </li>
+                    <li>Webes alkalmazások felépítése, fejlesztési módszerek</li>
+                    <li>HTML alapok
+                    </li>
+                    <li>HTML űrlapok, böngésző függőség</li>
+                    <li>CSS alapok
+                    </li>
+                    <li>CSS technikák
+                    </li>
+                    <li>Komplex feladat megoldása HTML és CSS segítségével (gyakorlati bemutató)
+                    </li>
+                    <li>JavaScript alapok
+                    </li>
+                    <li>JavaScript technikák
+                    </li>
+                    <li>AJAX, jQuery
+                    </li>
+                    <li>Web Design
+                    </li>
+                    <li>Komplex feladat megoldása HTML, CSS és JavaScript segítségével (gyakorlati bemutató)
+                    </li>
+                    <li>
+                        Összefoglalás, konzultáció
+                    </li>
+                </ul>
+            </div>
+            <img src="./assets/webtech1.jpg" alt="webtech1" width="50%" height="50%">
+        </div>
+        <div class="footer">
+            <p>Forrás: https://iit.uni-miskolc.hu/</p>
+            <p>Tóth Mátyás, OQH5NH, 2025</p>
+            <p style="width: 200px;"></p>
+        </div>
+        <a href="index.html" class="vissza-gomb">Vissza a főoldalra</a>
+    </div>
+</body>
+
+</html>
