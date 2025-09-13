@@ -7,12 +7,31 @@
     <title>Tantárgyak | Kezdőlap</title>
 </head>
 <style>
+    :root {
+        --accent: #2563eb;
+        --accent-2: #2563eb;
+        --text: #0f172a;
+        --muted: #475569;
+        --card-bg: rgba(255, 255, 255, 0.75);
+        --card-border: rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        font-family: Arial, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
         margin: 0;
         padding: 0;
-        background-image: url('./assets/bg.jpg');
+        line-height: 1.6;
+        color: var(--text);
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(147, 51, 234, 0.12)), url('./assets/bg.jpg');
         background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
     }
 
     .content {
@@ -22,28 +41,75 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     .kep {
         object-fit: cover;
         object-position: 50% 70%;
         width: 100%;
-        height: 25vh;
-        border-radius: 0 0 10px 10px;
+        height: 28vh;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.2);
+        filter: brightness(0.95) saturate(1.05);
     }
 
     .menupontok {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 75%;
+        width: 100%;
         align-items: center;
+        gap: 12px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 10px 14px;
+        backdrop-filter: saturate(160%) blur(10px);
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .nav-cim {
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--muted);
+        padding: 10px 14px;
+        border-radius: 10px;
+        transition: color .2s ease, background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nav-cim:hover {
+        color: var(--accent);
+        background: rgba(37, 99, 235, 0.08);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(2, 6, 23, 0.08);
+        cursor: pointer;
+    }
+
+    .nav-cim-highlight {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #ffffff;
+        padding: 10px 14px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
     }
 
     .video {
-        width: 25%;
-        margin-top: 100px;
-        border-radius: 10px;
+        width: 50%;
+        margin-top: 40px;
+        border-radius: 14px;
+        border: 1px solid var(--card-border);
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.15);
+        background: #000;
     }
 
     .szoveges-tartalom {
@@ -52,7 +118,21 @@
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        margin-top: 100px;
+        margin-top: 16px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+    }
+
+    .szoveges-tartalom h3, .szoveges-tartalom h2 {
+        margin: 0 0 10px;
+    }
+
+    .szoveges-tartalom p {
+        margin: 0;
+        color: var(--muted);
     }
 
     .footer {
@@ -61,18 +141,34 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 8px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 12px 16px;
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
     }
 
-    .nav-cim {
-        font-size: 20px;
-        text-decoration: underline;
-        font-weight: bold;
+    .footer p {
+        margin: 0;
+        color: var(--muted);
     }
 
-    .nav-cim:hover {
-        color: #444444;
-        cursor: pointer;
+    @media (max-width: 992px) {
+        .content {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .menupontok {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .video {
+            width: 100%;
+            margin-top: 24px;
+        }
     }
 </style>
 
