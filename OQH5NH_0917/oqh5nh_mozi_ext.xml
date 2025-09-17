@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mozi>
+    <film id="txn_nxm_2jb" mufaj="horror">
+        <rendezo id="nzk_4xm_2jb" nev="alex" />
+        <szinesz id="u5g_4xm_2jb" nev="Madison_Ivy" />
+        <szinesz id="a">
+            <gyerekszinesz />
+            <musicalszinesz />
+            <szinkronszinesz />
+        </szinesz>
+        <iro id="trv_4xm_2jb" />
+    </film>
+    <film id="uz1_dzu_29t" mufaj="akcio">
+        <rendezo id="sls_34l_aaf" nev="Christopher_Nolan">
+            <oscarsbestdirector_dij year="2024" />
+            <fizetes>1.200.000</fizetes>
+        </rendezo>
+        <iro id="sbd_5nn_sdh" nev="John Doe">
+            <fizetes>1.000.000</fizetes>
+            <szuletesihely>New_York</szuletesihely>
+        </iro>
+    </film>
+</mozi>
