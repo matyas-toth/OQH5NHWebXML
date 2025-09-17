@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantárgyak | Webes adatkezelő környezetek</title>
+</head>
+<style>
+    :root {
+        --accent: #2563eb;
+        --accent-2: #2563eb;
+        --text: #0f172a;
+        --muted: #475569;
+        --card-bg: rgba(255, 255, 255, 0.75);
+        --card-border: rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: var(--text);
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(147, 51, 234, 0.12)), url('./assets/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    .content {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .kep {
+        object-fit: cover;
+        object-position: 50% 70%;
+        width: 100%;
+        height: 28vh;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.2);
+        filter: brightness(0.95) saturate(1.05);
+        cursor: pointer;
+    }
+
+    .menupontok {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        gap: 12px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 10px 14px;
+        backdrop-filter: saturate(160%) blur(10px);
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+    }
+
+    a { text-decoration: none; }
+
+    .nav-cim {
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--muted);
+        padding: 10px 14px;
+        border-radius: 10px;
+        transition: color .2s ease, background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nav-cim:hover {
+        color: var(--accent);
+        background: rgba(37, 99, 235, 0.08);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(2, 6, 23, 0.08);
+        cursor: pointer;
+    }
+
+    .nav-cim-highlight {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #ffffff;
+        padding: 10px 14px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+    }
+
+    .szoveges-tartalom {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: 16px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+    }
+
+    .szoveges-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        gap: 16px;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 12px 16px;
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+    }
+
+    .footer p { margin: 0; color: var(--muted); }
+
+    .vissza-gomb {
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #ffffff;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        padding: 10px 14px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+        display: inline-block;
+        margin-top: 10px;
+        transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    .vissza-gomb:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.05);
+        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.18);
+    }
+
+    @media (max-width: 992px) {
+        .content { padding-left: 24px; padding-right: 24px; }
+        .menupontok { flex-wrap: wrap; justify-content: center; }
+        .szoveges-tartalom, .szoveges-wrapper img { width: 100%; }
+    }
+</style>
+
+<body>
+    <div class="content">
+        <img src="./assets/infoep.jpg" alt="infoep" class="kep" onclick="window.location.href='index.html'">
+        <div class="menupontok">
+            <a href="database.html">
+                <p class="nav-cim">Adatbázis rendszerek</p>
+            </a>
+            <a href="webtech1.html">
+                <p class="nav-cim">Web technológiák 1.</p>
+            </a>
+            <a href="xml.html">
+                <p class="nav-cim nav-cim-highlight">Webes adatkezelő környezetek</p>
+            </a>
+        </div>
+
+        <div class="szoveges-wrapper">
+            <div class="szoveges-tartalom">
+                <h2><strong>Webes adatkezelő környezetek</strong></h2>
+                <p>Oktató: Dr. Bednarik László<br>Kredit: 5</p>
+                <h3>Tematika</h3>
+                <ul>
+                    <li>XML alapjai
+                    </li>
+                    <li>XMLSchema</li>
+                    <li>DOM API modell
+                    </li>
+                    <li>XPath szabvány</li>
+                    <li>XSLT szabvány
+                    </li>
+                    <li>JSON adatkezelés
+                    </li>
+                    <li>LocalStorage
+                    </li>
+                    <li>Cloud rendszerek
+                    </li>
+                    <li>BlockChain rendszerek
+                    </li>
+
+                </ul>
+            </div>
+            <img src="./assets/xml.webp" alt="webtech1" width="50%" height="50%">
+        </div>
+        <div class="footer">
+            <p>Forrás: https://elearning.uni-miskolc.hu/</p>
+            <p>Tóth Mátyás, OQH5NH, 2025</p>
+            <p style="width: 200px;"></p>
+        </div>
+        <a href="index.html" class="vissza-gomb">Vissza a főoldalra</a>
+    </div>
+</body>
+
+</html>
