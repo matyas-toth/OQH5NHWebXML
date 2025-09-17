@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konferenciak>
+    <konferencia>
+        <cim>Webes Technológiai Konferencia 2024</cim>
+        <helyszin>Budapest, BME Informatikai Kar</helyszin>
+        <datum>2024-03-15</datum>
+        <eloado>
+            <nev>Dr. Kovács Péter</nev>
+            <lakcim>Budapest, Váci út 1-3, 1052</lakcim>
+            <adoszam>12345678-1-41</adoszam>
+        </eloado>
+        <hallgatok>
+            <hallgato>
+                <nev>Nagy Anna</nev>
+                <lakcim>Debrecen, Széchenyi utca 5, 4032</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Szabó Gábor</nev>
+                <lakcim>Szeged, Dugonics tér 13, 6720</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Kiss Eszter</nev>
+                <lakcim>Pécs, Rákóczi út 2, 7621</lakcim>
+            </hallgato>
+        </hallgatok>
+    </konferencia>
+    
+    <konferencia>
+        <cim>Mesterséges Intelligencia és Adatbányászat</cim>
+        <helyszin>Szeged, SZTE Természettudományi Kar</helyszin>
+        <datum>2024-04-20</datum>
+        <eloado>
+            <nev>Prof. Dr. Tóth László</nev>
+            <lakcim>Szeged, Boldogasszony sgt. 6, 6725</lakcim>
+            <adoszam>87654321-2-42</adoszam>
+        </eloado>
+        <hallgatok>
+            <hallgato>
+                <nev>Varga Márton</nev>
+                <lakcim>Győr, Árpád út 30, 9021</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Molnár Petra</nev>
+                <lakcim>Miskolc, Széchenyi István út 1, 3525</lakcim>
+            </hallgato>
+        </hallgatok>
+    </konferencia>
+    
+    <konferencia>
+        <cim>Cybersecurity és Hálózati Biztonság</cim>
+        <helyszin>Debrecen, DE Informatikai Kar</helyszin>
+        <datum>2024-05-10</datum>
+        <eloado>
+            <nev>Dr. Horváth Zoltán</nev>
+            <lakcim>Debrecen, Egyetem tér 1, 4032</lakcim>
+            <adoszam>11223344-3-43</adoszam>
+        </eloado>
+        <hallgatok>
+            <hallgato>
+                <nev>Farkas Dávid</nev>
+                <lakcim>Szolnok, Kossuth Lajos út 4, 5000</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Balogh Zsófia</nev>
+                <lakcim>Kecskemét, Széchenyi tér 1, 6000</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Takács Bence</nev>
+                <lakcim>Székesfehérvár, Városháza tér 1, 8000</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Németh Viktória</nev>
+                <lakcim>Kaposvár, Fő utca 8, 7400</lakcim>
+            </hallgato>
+        </hallgatok>
+    </konferencia>
+    
+    <konferencia>
+        <cim>Mobil Alkalmazásfejlesztés Workshop</cim>
+        <helyszin>Pécs, PTE Műszaki és Informatikai Kar</helyszin>
+        <datum>2024-06-05</datum>
+        <eloado>
+            <nev>Dr. Simon Andrea</nev>
+            <lakcim>Pécs, Rét utca 2, 7623</lakcim>
+            <adoszam>55667788-4-44</adoszam>
+        </eloado>
+        <hallgatok>
+            <hallgato>
+                <nev>Kovács Máté</nev>
+                <lakcim>Békéscsaba, Széchenyi utca 12, 5600</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Szűcs Réka</nev>
+                <lakcim>Eger, Dobó István tér 1, 3300</lakcim>
+            </hallgato>
+        </hallgatok>
+    </konferencia>
+    
+    <konferencia>
+        <cim>Adatbázis Tervezés és Optimalizálás</cim>
+        <helyszin>Győr, SZE Informatikai Kar</helyszin>
+        <datum>2024-07-12</datum>
+        <eloado>
+            <nev>Prof. Dr. Nagy István</nev>
+            <lakcim>Győr, Egyetem tér 1, 9026</lakcim>
+            <adoszam>99887766-5-45</adoszam>
+        </eloado>
+        <hallgatok>
+            <hallgato>
+                <nev>Papp Tamás</nev>
+                <lakcim>Veszprém, Óváros tér 1, 8200</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Kiss Ádám</nev>
+                <lakcim>Zalaegerszeg, Széchenyi tér 1, 8900</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Molnár Dorottya</nev>
+                <lakcim>Salgótarján, Fő tér 1, 3100</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Fekete Gergő</nev>
+                <lakcim>Szombathely, Fő tér 1, 9700</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Varga Lilla</nev>
+                <lakcim>Nyíregyháza, Kossuth tér 1, 4400</lakcim>
+            </hallgato>
+        </hallgatok>
+    </konferencia>
+</konferenciak>
