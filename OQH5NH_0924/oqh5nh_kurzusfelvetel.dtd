@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!ELEMENT VM3DIR_kurzusfelvetel (hallgato, kurzusok)>
-<!ATTLIST VM3DIR_kurzusfelvetel
+<!ELEMENT OQH5NH_kurzusfelvetel (hallgato, kurzusok)>
+<!ATTLIST OQH5NH_kurzusfelvetel
           tanév CDATA #REQUIRED
           egyetem CDATA #REQUIRED>
 

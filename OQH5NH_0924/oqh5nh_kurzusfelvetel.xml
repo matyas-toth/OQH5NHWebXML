@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE OQH5NH_kurzusfelvetel SYSTEM "oqh5nh_kurzusfelvetel.dtd">
+<OQH5NH_kurzusfelvetel tanév="2025/26" egyetem="MiskolciEgyetem">
+    <hallgato>
+        <hnev>Vay Dominika</hnev>
+        <szulev>2003</szulev>
+        <szak evf="3">Mérnökinformatikus BSc</szak>
+    </hallgato>
+    
+    <kurzusok>
+        <kurzus id="VM3DIR">
+            <kurzusnev>Web technológiák 1.</kurzusnev>
+            <kredit>4</kredit>
+            <hely>5. előadó</hely>
+            <idopont>Hétfő 10:00-12:00</idopont>
+            <oktato>Agárdi Anita</oktato>
+        </kurzus>
+        
+        <kurzus id="VM3DIR" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Mobil programozási alapok</kurzusnev>
+            <kredit>3</kredit>
+            <hely>Infó épület 1. emelet 101. terem</hely>
+            <idopont>Hétfő 16:00-18:00</idopont>
+            <oktato>Agárdi Anita</oktato>
+            <oraado>Óraadó neve</oraado>
+        </kurzus>
+        
+        <kurzus id="VM3DIR">
+            <kurzusnev>Mesterséges Intelligencia alapok</kurzusnev>
+            <kredit>4</kredit>
+            <hely>32. előadó</hely>
+            <idopont>Kedd 10:00-12:00</idopont>
+            <oktato>Kunné Dr. Tamás Judit</oktato>
+        </kurzus>
+        
+        <kurzus id="VM3DIR" jovahagyas="nem" nyelv="magyar">
+            <kurzusnev>UNIX rendszergazda</kurzusnev>
+            <kredit>3</kredit>
+            <hely>Infó épület 1. emelet 103. terem</hely>
+            <idopont>Szerda 08:00-10:00</idopont>
+            <oktato>Dr. Baksa Attila</oktato>
+            <oraado>Dr. Nagy János</oraado>
+        </kurzus>
+        
+        <kurzus id="VM3DIR">
+            <kurzusnev>Webes adatkezelő környezetek</kurzusnev>
+            <kredit>4</kredit>
+            <hely>A1/310</hely>
+            <idopont>Szerda 08:00-10:00</idopont>
+            <oktato>Dr. Kovács László József</oktato>
+        </kurzus>
+        
+        <kurzus id="VM3DIR">
+            <kurzusnev>Elektronika-elektrotechnika</kurzusnev>
+            <kredit>3</kredit>
+            <hely>3. előadó</hely>
+            <idopont>Hétfő 08:00-10:00</idopont>
+            <oktato>Szabó Norbert</oktato>
+        </kurzus>
+    </kurzusok>
+</OQH5NH_kurzusfelvetel>
