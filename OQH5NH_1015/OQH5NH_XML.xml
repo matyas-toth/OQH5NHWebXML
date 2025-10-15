@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OQH5NH_Vendeglatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="..">
+
+    <!-- Ettermek -->
+
+    <etterem ekod="e1">
+        <nev>Trófea</nev>
+        <csillag>5</csillag>
+        <cim>
+            <varos>Budapest</varos>
+            <utca>Ferenczy István utca</utca>
+            <hazszam>10</hazszam>
+        </cim>
+    </etterem>
+
+    <etterem ekod="e2">
+        <nev>Sonny's</nev>
+        <csillag>5</csillag>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Bocskai Gábor utca</utca>
+            <hazszam>32</hazszam>
+        </cim>
+    </etterem>
+    
+    <!-- Foszakacsok -->
+
+    <foszakacs fkod="f1" e_f="e1">
+        <nev>Havas Péter</nev>
+        <eletkor>35</eletkor>
+        <vegzettseg>Szakközépiskola</vegzettseg>
+        <vegzettseg>Institut Paul Bocuse</vegzettseg>
+    </foszakacs>
+
+    <foszakacs fkod="f2" e_f="e2">
+        <nev>Nagy Károly</nev>
+        <eletkor>30</eletkor>
+        <vegzettseg>Le Cordon Bleu</vegzettseg>
+    </foszakacs>
+
+    <!-- Szakacsok -->
+
+    <szakacs szkod="sz1" e_sz="e1">
+        <nev>Tóth Márton</nev>
+        <reszleg>Konyha</reszleg>
+        <vegzettseg>Konyhás</vegzettseg>
+        <vegzettseg>Institut Paul Bocuse</vegzettseg>
+    </szakacs>
+
+    <szakacs szkod="sz2" e_sz="e2">
+        <nev>Kovács Gábor</nev>
+        <reszleg>Konyha</reszleg>
+        <vegzettseg>Konyhás</vegzettseg>
+        <vegzettseg>Le Cordon Bleu</vegzettseg>
+    </szakacs>
+
+    <szakacs szkod="sz3" e_sz="e2">
+        <nev>Kiss Péter</nev>
+        <reszleg>Tűzhely</reszleg>
+        <vegzettseg>Szakács</vegzettseg>
+        <vegzettseg>Institut Paul Bocuse</vegzettseg>
+    </szakacs>
+
+    <!-- Gyakornokok -->
+
+    <gyakornok gkod="g1" e_g="e1">
+        <nev>Kiss Péter</nev>
+        <gyakorlat>
+            <kezdete>2025-01-01</kezdete>
+            <idotartama>6 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Délelőtt</muszak>
+        <muszak>Délután</muszak>
+    </gyakornok>
+
+    <gyakornok gkod="g2" e_g="e1">
+        <nev>Bocskai Gábor</nev>
+        <gyakorlat>
+            <kezdete>2025-02-01</kezdete>
+            <idotartama>3 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Délután</muszak>
+    </gyakornok>
+
+    <gyakornok gkod="g3" e_g="e2">
+        <nev>Király Ádám</nev>
+        <gyakorlat>
+            <kezdete>2025-03-01</kezdete>
+            <idotartama>12 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Délelőtt</muszak>
+    </gyakornok>
+
+    <!-- Vendegek -->
+
+    <vendeg vkod="v1" e_v="e1">
+        <nev>Kovács Péter</nev>
+        <eletkor>19</eletkor>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Bocskai Gábor utca</utca>
+            <hazszam>32</hazszam>
+        </cim>
+    </vendeg>
+
+    <vendeg vkod="v2" e_v="e2">
+        <nev>Nagy Péter</nev>
+        <eletkor>27</eletkor>
+        <cim>
+            <varos>Debrecen</varos>
+            <utca>Egyetem utca</utca>
+            <hazszam>1</hazszam>
+        </cim>
+    </vendeg>
+
+    <!-- Rendelesek -->
+
+    <rendeles rkod="r1" e_r="e1">
+        <osszeg>12.000</osszeg>
+        <etel>Margherita Pizza</etel>
+    </rendeles>
+
+    <rendeles rkod="r2" e_r="e2">
+        <osszeg>15.000</osszeg>
+        <etel>Hamburger</etel>
+    </rendeles>
+
+</OQH5NH_Vendeglatas>
