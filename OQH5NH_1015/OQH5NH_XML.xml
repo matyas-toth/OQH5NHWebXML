@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OQH5NH_Vendeglatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="..">
+<OQH5NH_Vendeglatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OQH5NH_XMLSchema.xsd">
 
     <!-- Ettermek -->
 
@@ -115,12 +115,12 @@
 
     <!-- Rendelesek -->
 
-    <rendeles rkod="r1" e_r="e1">
+    <rendeles rkod="r1" e_r="e1" v_r="v1">
         <osszeg>12.000</osszeg>
         <etel>Margherita Pizza</etel>
     </rendeles>
 
-    <rendeles rkod="r2" e_r="e2">
+    <rendeles rkod="r2" e_r="e2" v_r="v2">
         <osszeg>15.000</osszeg>
         <etel>Hamburger</etel>
     </rendeles>

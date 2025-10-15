@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OQH5NH_Vendeglatas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OQH5NH_XMLSchemaGPT.xsd">
+    <etterem ekod="e10">
+        <nev>Arany Kesztyű</nev>
+        <csillag>4</csillag>
+        <cim>
+            <varos>Székesfehérvár</varos>
+            <utca>Piac utca</utca>
+            <hazszam>12</hazszam>
+        </cim>
+    </etterem>
+    <etterem ekod="e20">
+        <nev>Zöld Csónak</nev>
+        <csillag>5</csillag>
+        <cim>
+            <varos>Pécs</varos>
+            <utca>Király utca</utca>
+            <hazszam>7</hazszam>
+        </cim>
+    </etterem>
+    <foszakacs fkod="f10" e_f="e10">
+        <nev>Simon András</nev>
+        <eletkor>41</eletkor>
+        <vegzettseg>Vendéglátóipari Szakközépiskola</vegzettseg>
+        <vegzettseg>Institut Paul Bocuse</vegzettseg>
+    </foszakacs>
+    <foszakacs fkod="f20" e_f="e20">
+        <nev>Kerekes Júlia</nev>
+        <eletkor>33</eletkor>
+        <vegzettseg>Le Cordon Bleu</vegzettseg>
+    </foszakacs>
+    <szakacs szkod="sz10" e_sz="e10">
+        <nev>Molnár Dániel</nev>
+        <reszleg>Hidegkonyha</reszleg>
+        <vegzettseg>Szakács</vegzettseg>
+    </szakacs>
+    <szakacs szkod="sz20" e_sz="e10">
+        <nev>Farkas Tímea</nev>
+        <reszleg>Cukrászat</reszleg>
+        <vegzettseg>Cukrász</vegzettseg>
+    </szakacs>
+    <szakacs szkod="sz30" e_sz="e20">
+        <nev>Szegedi Márk</nev>
+        <reszleg>Melegkonyha</reszleg>
+        <vegzettseg>Szakács</vegzettseg>
+        <vegzettseg>Le Cordon Bleu</vegzettseg>
+    </szakacs>
+    <gyakornok gkod="g10" e_g="e10">
+        <nev>Oláh Ákos</nev>
+        <gyakorlat>
+            <kezdete>2025-04-01</kezdete>
+            <idotartama>6 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Délelőtt</muszak>
+    </gyakornok>
+    <gyakornok gkod="g20" e_g="e20">
+        <nev>Hegedűs Emma</nev>
+        <gyakorlat>
+            <kezdete>2025-05-15</kezdete>
+            <idotartama>3 hónap</idotartama>
+        </gyakorlat>
+        <muszak>Délután</muszak>
+        <muszak>Éjszaka</muszak>
+    </gyakornok>
+    <vendeg vkod="v10" e_v="e10">
+        <nev>Kiss Eszter</nev>
+        <eletkor>24</eletkor>
+        <cim>
+            <varos>Győr</varos>
+            <utca>Bajcsy-Zsilinszky út</utca>
+            <hazszam>3</hazszam>
+        </cim>
+    </vendeg>
+    <vendeg vkod="v20" e_v="e20">
+        <nev>Németh László</nev>
+        <eletkor>38</eletkor>
+        <cim>
+            <varos>Szeged</varos>
+            <utca>Tisza Lajos körút</utca>
+            <hazszam>25</hazszam>
+        </cim>
+    </vendeg>
+    <rendeles rkod="r10" e_r="e10" v_r="v10">
+        <osszeg>9800</osszeg>
+        <etel>Gulyásleves</etel>
+    </rendeles>
+    <rendeles rkod="r20" e_r="e20" v_r="v20">
+        <osszeg>14200</osszeg>
+        <etel>Rántott hús</etel>
+    </rendeles>
+</OQH5NH_Vendeglatas>
