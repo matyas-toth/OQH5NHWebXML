@@ -2,7 +2,7 @@
 
 Egyedek és főbb tulajdonságaik:
  Állat (állatID, név, faj, születésiDátum, oltások [többértékű])
- Gazda (gazdaID, név, cím, telefonszám, email)
+ Gazda (gazdaID, név, cím (város, utca, házszám), telefonszám, email)
  Orvos (orvosID, név, szakterület, beosztás)
  Kezelés (kezelésID, dátum, diagnózis, ár)
  Gyógyszer (gyógyszerID, név, hatóanyag, adagolás)
