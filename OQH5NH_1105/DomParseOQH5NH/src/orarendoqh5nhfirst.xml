@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><ora id="1" tipus="elmelet">
+            
+    <targy>Elektrotechnika, elektronika</targy>
+            
+    <idopont>
+                    
+        <nap>Hétfő</nap>
+                    
+        <tol>08:00</tol>
+                    
+        <ig>10:00</ig>
+                
+    </idopont>
+            
+    <helyszin>3. előadó</helyszin>
+            
+    <oktato>Szabó Norbert</oktato>
+            
+    <szak>Mérnökinformatikus BSc</szak>
+        
+</ora>
