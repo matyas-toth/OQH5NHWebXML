@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<OQH5NH_AllatorvosiRendelo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OQH5NH_XMLSchema.xsd">
+        
+    
+    
+    <gazda gazdaID="G001">
+                
+        <nev>Kovács János</nev>
+                
+        <cim>
+                        
+            <varos>Budapest</varos>
+                        
+            <utca>Fő utca</utca>
+                        
+            <hazszam>12</hazszam>
+                    
+        </cim>
+                
+        <telefonszam>+36301234567</telefonszam>
+                
+        <email>kovacs.janos@email.hu</email>
+            
+    </gazda>
+        
+    
+    <gazda gazdaID="G002">
+                
+        <nev>Nagy Eszter</nev>
+                
+        <cim>
+                        
+            <varos>Debrecen</varos>
+                        
+            <utca>Petőfi utca</utca>
+                        
+            <hazszam>45</hazszam>
+                    
+        </cim>
+                
+        <telefonszam>+36209876543</telefonszam>
+                
+        <email>nagy.eszter@email.hu</email>
+            
+    </gazda>
+        
+    
+    <gazda gazdaID="G003">
+                
+        <nev>Tóth Péter</nev>
+                
+        <cim>
+                        
+            <varos>Szeged</varos>
+                        
+            <utca>Kossuth tér</utca>
+                        
+            <hazszam>8</hazszam>
+                    
+        </cim>
+                
+        <telefonszam>+36705551234</telefonszam>
+                
+        <email>toth.peter@email.hu</email>
+            
+    </gazda>
+        
+    
+    
+    <allat allatID="A001" g_a="G001">
+                
+        <nev>Bodri</nev>
+                
+        <faj>Labrador retriever</faj>
+                
+        <szuletesiDatum>2020-05-15</szuletesiDatum>
+                
+        <oltas>Veszettség</oltas>
+                
+        <oltas>Parvo</oltas>
+                
+        <oltas>Hepatitis</oltas>
+            
+    </allat>
+        
+    
+    <allat allatID="A002" g_a="G001">
+                
+        <nev>Cirmos</nev>
+                
+        <faj>Házi macska</faj>
+                
+        <szuletesiDatum>2021-03-20</szuletesiDatum>
+                
+        <oltas>Veszettség</oltas>
+                
+        <oltas>Macskabetegség</oltas>
+            
+    </allat>
+        
+    
+    <allat allatID="A003" g_a="G002">
+                
+        <nev>Rex</nev>
+                
+        <faj>Német juhászkutya</faj>
+                
+        <szuletesiDatum>2019-08-10</szuletesiDatum>
+                
+        <oltas>Veszettség</oltas>
+                
+        <oltas>Parvo</oltas>
+            
+    </allat>
+        
+    
+    <allat allatID="A004" g_a="G003">
+                
+        <nev>Füles</nev>
+                
+        <faj>Fehér óriás nyúl</faj>
+                
+        <szuletesiDatum>2022-01-05</szuletesiDatum>
+                
+        <oltas>Myxomatosis</oltas>
+                
+        <oltas>RHD</oltas>
+            
+    </allat>
+        
+    
+    
+    <orvos orvosID="O001">
+                
+        <nev>Dr. Szabó Anna</nev>
+                
+        <szakterulet>Sebészet</szakterulet>
+                
+        <beosztas>Főorvos</beosztas>
+            
+    </orvos>
+        
+    
+    <orvos orvosID="O002">
+                
+        <nev>Dr. Molnár Gábor</nev>
+                
+        <szakterulet>Belgyógyászat</szakterulet>
+                
+        <beosztas>Szakorvos</beosztas>
+            
+    </orvos>
+        
+    
+    <orvos orvosID="O003">
+                
+        <nev>Dr. Kiss Márta</nev>
+                
+        <szakterulet>Általános állatorvos</szakterulet>
+                
+        <beosztas>Szakorvos</beosztas>
+            
+    </orvos>
+        
+    
+    
+    <gyogyszer gyogyszerID="GY001">
+                
+        <nev>Amoxicillin</nev>
+                
+        <hatoanyag>Amoxicillinum</hatoanyag>
+                
+        <adagolas>10 mg/kg naponta kétszer</adagolas>
+            
+    </gyogyszer>
+        
+    
+    <gyogyszer gyogyszerID="GY002">
+                
+        <nev>Metacam</nev>
+                
+        <hatoanyag>Meloxicam</hatoanyag>
+                
+        <adagolas>0.1 mg/kg naponta egyszer</adagolas>
+            
+    </gyogyszer>
+        
+    
+    <gyogyszer gyogyszerID="GY003">
+                
+        <nev>Milbemax</nev>
+                
+        <hatoanyag>Milbemycin-oxim és Praziquantel</hatoanyag>
+                
+        <adagolas>Testsúly szerint, egyszeri adag</adagolas>
+            
+    </gyogyszer>
+        
+    
+    
+    <kezeles a_k="A001" kezelesID="K001" o_k="O001">
+                
+        <datum>2023-11-15</datum>
+                
+        <diagnozis>Lábsérülés, sebészeti beavatkozás szükséges</diagnozis>
+                
+        <ar>45000</ar>
+            
+    </kezeles>
+        
+    
+    <kezeles a_k="A002" kezelesID="K002" o_k="O003">
+                
+        <datum>2023-10-20</datum>
+                
+        <diagnozis>Rutin oltás és általános vizsgálat</diagnozis>
+                
+        <ar>8500</ar>
+            
+    </kezeles>
+        
+    
+    <kezeles a_k="A003" kezelesID="K003" o_k="O002">
+                
+        <datum>2023-09-10</datum>
+                
+        <diagnozis>Gyomor-bélrendszeri fertőzés</diagnozis>
+                
+        <ar>25000</ar>
+            
+    </kezeles>
+        
+    
+    <kezeles a_k="A004" kezelesID="K004" o_k="O003">
+                
+        <datum>2023-12-05</datum>
+                
+        <diagnozis>Fogászati kezelés</diagnozis>
+                
+        <ar>12000</ar>
+            
+    </kezeles>
+        
+    
+    <kezeles a_k="A001" kezelesID="K005" o_k="O001">
+                
+        <datum>2023-12-01</datum>
+                
+        <diagnozis>Posztoperatív kontroll vizsgálat</diagnozis>
+                
+        <ar>15000</ar>
+            
+    </kezeles>
+        
+    
+    
+    <kezelesGyogyszer gy_kg="GY001" k_kg="K001">
+                
+        <adag>500 mg</adag>
+                
+        <idotartam>7 nap</idotartam>
+            
+    </kezelesGyogyszer>
+        
+    <kezelesGyogyszer gy_kg="GY002" k_kg="K001">
+                
+        <adag>5 ml</adag>
+                
+        <idotartam>5 nap</idotartam>
+            
+    </kezelesGyogyszer>
+        
+    
+    <kezelesGyogyszer gy_kg="GY001" k_kg="K003">
+                
+        <adag>750 mg</adag>
+                
+        <idotartam>10 nap</idotartam>
+            
+    </kezelesGyogyszer>
+        
+    <kezelesGyogyszer gy_kg="GY003" k_kg="K003">
+                
+        <adag>1 tabletta</adag>
+                
+        <idotartam>1 nap</idotartam>
+            
+    </kezelesGyogyszer>
+        
+    
+    <kezelesGyogyszer gy_kg="GY002" k_kg="K004">
+                
+        <adag>2 ml</adag>
+                
+        <idotartam>3 nap</idotartam>
+            
+    </kezelesGyogyszer>
+        
+    
+    
+    <egeszsegugyiKonyv a_ek="A001" konyvID="EK001">
+                
+        <letrehozasDatum>2020-05-20</letrehozasDatum>
+                
+        <megjegyzes>Oltási könyv komplett, minden oltás időben</megjegyzes>
+            
+    </egeszsegugyiKonyv>
+        
+    
+    <egeszsegugyiKonyv a_ek="A002" konyvID="EK002">
+                
+        <letrehozasDatum>2021-03-25</letrehozasDatum>
+                
+        <megjegyzes>Figyelem: allergiás egyes táplálékokra</megjegyzes>
+            
+    </egeszsegugyiKonyv>
+        
+    
+    <egeszsegugyiKonyv a_ek="A003" konyvID="EK003">
+                
+        <letrehozasDatum>2019-08-15</letrehozasDatum>
+                
+        <megjegyzes>Érzékeny gyomor, speciális táplálás szükséges</megjegyzes>
+            
+    </egeszsegugyiKonyv>
+        
+    
+    <egeszsegugyiKonyv a_ek="A004" konyvID="EK004">
+                
+        <letrehozasDatum>2022-01-10</letrehozasDatum>
+                
+        <megjegyzes>Rendszeres fogazati ellenőrzés ajánlott</megjegyzes>
+            
+    </egeszsegugyiKonyv>
+    
+</OQH5NH_AllatorvosiRendelo>
