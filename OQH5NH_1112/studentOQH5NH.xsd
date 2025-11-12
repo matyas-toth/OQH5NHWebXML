@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- SimpleType: Diák azonosító típusa -->
+    <xs:simpleType name="idType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="9999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- SimpleType: Név típusa (keresztnév, vezetéknév) -->
+    <xs:simpleType name="nevType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="50"/>
+            <xs:pattern value="[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+([\s\-][A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- SimpleType: Becenév típusa -->
+    <xs:simpleType name="becenevType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+            <xs:maxLength value="30"/>
+            <xs:pattern value="[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- SimpleType: Életkor típusa -->
+    <xs:simpleType name="korType">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:minInclusive value="16"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ComplexType: Diák típusa -->
+    <xs:complexType name="studentType">
+        <xs:sequence>
+            <xs:element name="keresztnev" type="nevType"/>
+            <xs:element name="vezeteknev" type="nevType"/>
+            <xs:element name="becenev" type="becenevType"/>
+            <xs:element name="kor" type="korType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idType" use="required"/>
+    </xs:complexType>
+
+    <!-- ComplexType: Osztály típusa -->
+    <xs:complexType name="classType">
+        <xs:sequence>
+            <xs:element name="student" type="studentType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Root element: Osztály -->
+    <xs:element name="class" type="classType"/>
+
+</xs:schema>
