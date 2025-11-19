@@ -1,0 +1,150 @@
+{
+  "TM_orarend": {
+    "ora": [
+      {
+        "targy": "Elektrotechnika, elektronika",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": 8,
+          "ig": 10
+        },
+        "helyszin": "3. előadó",
+        "oktató": "Szabó Norbert",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Web technológiák I.",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": 10,
+          "ig": 12
+        },
+        "helyszin": "5. előadó",
+        "oktató": "Agárdi Anita",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Angol műszaki szaknyelv I.",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": 12,
+          "ig": 14
+        },
+        "helyszin": "A/1 102-103",
+        "oktató": "Nagyné Varga Orsolya",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Web technológiák I.",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": 14,
+          "ig": 16
+        },
+        "helyszin": "Inf. 101",
+        "oktató": "Agárdi Anita",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Mobil programozás alapok",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": 16,
+          "ig": 18
+        },
+        "helyszin": "Inf. 101",
+        "oktató": "Agárdi Anita",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Mobil programozás alapok",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": 18,
+          "ig": 20
+        },
+        "helyszin": "Inf. 101",
+        "oktató": "Agárdi Anita",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Mesterséges intelligencia alapok",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": 10,
+          "ig": 12
+        },
+        "helyszin": "32. előadó",
+        "oktató": "Kunné Dr. Tamás Judit",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Mesterséges intelligencia alapok",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": 12,
+          "ig": 14
+        },
+        "helyszin": "32. előadó",
+        "oktató": "Fazekas Levente Áron",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Elektrotechnika, elektronika",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": 14,
+          "ig": 16
+        },
+        "helyszin": "A/1 317",
+        "oktató": "Dr. Kozsely Gábor",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "UNIX rendszergazda",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": 17,
+          "ig": 19
+        },
+        "helyszin": "Inf. 202",
+        "oktató": "Dr. Baksa Attila",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "UNIX rendszergazda",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": 8,
+          "ig": 10
+        },
+        "helyszin": "Inf. 103",
+        "oktató": "Dr. Baksa Attila",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Webes adatkezelő környezetek",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": 8,
+          "ig": 10
+        },
+        "helyszin": "A/1 310",
+        "oktató": "Dr. Kovács László József",
+        "szak": "Mérnökinformatikus BSc"
+      },
+      {
+        "targy": "Webes adatkezelő környezetek",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": 10,
+          "ig": 12
+        },
+        "helyszin": "A/1 103",
+        "oktató": "Dr. Bednarik László",
+        "szak": "Mérnökinformatikus BSc"
+      }
+    ]
+  }
+}
+
