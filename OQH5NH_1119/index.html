@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órarend</title>
+</head>
+<body>
+    <h1>Órarend</h1>
+    <button onclick="loadJSON()">JSON betöltése</button>
+    <div id="output"></div>
+
+    <script>
+        function loadJSON() {
+            fetch('orarendoqh5nh.json')
+                .then(response => response.json())
+                .then(data => {
+                    displayData(data);
+                })
+                .catch(error => {
+                    document.getElementById('output').innerHTML = 'Hiba: ' + error;
+                });
+        }
+
+        function displayData(data) {
+            const output = document.getElementById('output');
+            let html = '<h2>Órák:</h2>';
+            
+            data.TM_orarend.ora.forEach(ora => {
+                html += '<div style="border: 1px solid #ccc; margin: 10px; padding: 10px;">';
+                html += '<strong>Tárgy:</strong> ' + ora.targy + '<br>';
+                html += '<strong>Nap:</strong> ' + ora.idopont.nap + '<br>';
+                html += '<strong>Időpont:</strong> ' + ora.idopont.tol + ':00 - ' + ora.idopont.ig + ':00<br>';
+                html += '<strong>Helyszín:</strong> ' + ora.helyszin + '<br>';
+                html += '<strong>Oktató:</strong> ' + ora.oktató + '<br>';
+                html += '<strong>Szak:</strong> ' + ora.szak + '<br>';
+                html += '</div>';
+            });
+            
+            output.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
