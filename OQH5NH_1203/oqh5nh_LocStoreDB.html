@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEPTUNKOD Hallgatók</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .panel {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .panel h2 {
+            color: #34495e;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #229954;
+        }
+
+        .btn-secondary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+
+        .btn-warning {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .btn-warning:hover {
+            background-color: #e67e22;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .search-sort-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .json-section {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .json-section h3 {
+            margin-bottom: 15px;
+            color: #34495e;
+            font-size: 16px;
+        }
+
+        .json-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .file-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #95a5a6;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .file-label:hover {
+            background-color: #7f8c8d;
+        }
+
+        .file-name {
+            margin-left: 10px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        thead {
+            background-color: #34495e;
+            color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            font-weight: 600;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        .actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OQH5NH Hallgatók</h1>
+
+        <!-- Új hallgató hozzáadása -->
+        <div class="panel">
+            <h2>Új hallgató hozzáadása</h2>
+            <form id="studentForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nev">Név:</label>
+                        <input type="text" id="nev" name="nev" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="evfolyam">Évfolyam:</label>
+                        <input type="number" id="evfolyam" name="evfolyam" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="szak">Szak:</label>
+                        <input type="text" id="szak" name="szak" value="PTI" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="pti@pti.hu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="neptunkod">NEPTUN kód:</label>
+                        <input type="text" id="neptunkod" name="neptunkod" value="AAA-123" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Mentés</button>
+            </form>
+        </div>
+
+        <!-- Keresés, Rendezés, Export/Import -->
+        <div class="panel">
+            <div class="search-sort-section">
+                <div class="form-group">
+                    <label for="search">Keresés:</label>
+                    <input type="text" id="search" placeholder="nev" oninput="searchStudents()">
+                </div>
+                <div class="form-group">
+                    <label for="sort">Rendezés:</label>
+                    <select id="sort" onchange="sortStudents()">
+                        <option value="">Nincs rendezés</option>
+                        <option value="nev">Név</option>
+                        <option value="evfolyam">Évfolyam</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="json-section">
+                <h3>Export / Import JSON:</h3>
+                <div class="json-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="exportJSON()">Export JSON</button>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="importFile" accept=".json" onchange="handleFileSelect(this)">
+                        <label for="importFile" class="file-label">Fájl kiválasztása</label>
+                    </div>
+                    <span id="fileName" class="file-name">Nincs fájl kiválasztva</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hallgatók listája -->
+        <div class="panel">
+            <div class="section-title">Hallgatók listája</div>
+            <div id="studentsTableContainer">
+                <table id="studentsTable">
+                    <thead>
+                        <tr>
+                            <th>Név</th>
+                            <th>Évfolyam</th>
+                            <th>Szak</th>
+                            <th>Email</th>
+                            <th>NEPTUN</th>
+                            <th>Műveletek</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTableBody">
+                        <!-- Dinamikusan töltődik -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'students';
+
+        let students = loadStudents();
+
+        document.getElementById('studentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            saveStudent();
+        });
+
+        function loadStudents() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : [];
+        }
+
+        function saveStudents() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(students));
+            renderStudents();
+        }
+
+        function saveStudent() {
+            const form = document.getElementById('studentForm');
+            const formData = new FormData(form);
+            
+            const student = {
+                id: Date.now(),
+                nev: formData.get('nev'),
+                evfolyam: parseInt(formData.get('evfolyam')),
+                szak: formData.get('szak'),
+                email: formData.get('email'),
+                neptunkod: formData.get('neptunkod')
+            };
+
+            const editId = form.dataset.editId;
+            if (editId) {
+                const index = students.findIndex(s => s.id == editId);
+                if (index !== -1) {
+                    students[index] = { ...student, id: parseInt(editId) };
+                    delete form.dataset.editId;
+                }
+            } else {
+                students.push(student);
+            }
+
+            saveStudents();
+            form.reset();
+            document.getElementById('szak').value = 'PTI';
+            document.getElementById('email').value = 'pti@pti.hu';
+            document.getElementById('neptunkod').value = 'AAA-123';
+        }
+
+        function deleteStudent(id) {
+            if (confirm('Biztosan törölni szeretné ezt a hallgatót?')) {
+                students = students.filter(s => s.id !== id);
+                saveStudents();
+            }
+        }
+
+        function editStudent(id) {
+            const student = students.find(s => s.id === id);
+            if (student) {
+                document.getElementById('nev').value = student.nev;
+                document.getElementById('evfolyam').value = student.evfolyam;
+                document.getElementById('szak').value = student.szak;
+                document.getElementById('email').value = student.email;
+                document.getElementById('neptunkod').value = student.neptunkod;
+                document.getElementById('studentForm').dataset.editId = id;
+                
+                document.querySelector('.panel').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function searchStudents() {
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            renderStudents(searchTerm);
+        }
+
+        function sortStudents() {
+            const sortBy = document.getElementById('sort').value;
+            renderStudents(null, sortBy);
+        }
+
+        function renderStudents(searchTerm = null, sortBy = null) {
+            const tbody = document.getElementById('studentsTableBody');
+            let filteredStudents = [...students];
+
+            if (searchTerm) {
+                filteredStudents = filteredStudents.filter(student => 
+                    student.nev.toLowerCase().includes(searchTerm) ||
+                    student.evfolyam.toString().includes(searchTerm) ||
+                    student.szak.toLowerCase().includes(searchTerm) ||
+                    student.email.toLowerCase().includes(searchTerm) ||
+                    student.neptunkod.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            if (sortBy) {
+                filteredStudents.sort((a, b) => {
+                    if (sortBy === 'nev') {
+                        return a.nev.localeCompare(b.nev);
+                    } else if (sortBy === 'evfolyam') {
+                        return a.evfolyam - b.evfolyam;
+                    }
+                    return 0;
+                });
+            }
+
+            if (filteredStudents.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-message">Nincs megjeleníthető hallgató</td></tr>';
+            } else {
+                tbody.innerHTML = filteredStudents.map(student => `
+                    <tr>
+                        <td>${escapeHtml(student.nev)}</td>
+                        <td>${student.evfolyam}</td>
+                        <td>${escapeHtml(student.szak)}</td>
+                        <td>${escapeHtml(student.email || '')}</td>
+                        <td>${escapeHtml(student.neptunkod || '')}</td>
+                        <td class="actions">
+                            <button class="btn btn-warning btn-small" onclick="editStudent(${student.id})" title="Módosít">
+                                <span style="font-size: 14px;">✎</span> Módosít
+                            </button>
+                            <button class="btn btn-danger btn-small" onclick="deleteStudent(${student.id})" title="Töröl">
+                                <span style="font-size: 14px;">🗑</span> Töröl
+                            </button>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function exportJSON() {
+            const dataStr = JSON.stringify(students, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'hallgatok.json';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function handleFileSelect(input) {
+            const file = input.files[0];
+            if (file) {
+                document.getElementById('fileName').textContent = file.name;
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const imported = JSON.parse(e.target.result);
+                        if (Array.isArray(imported)) {
+                            imported.forEach((student, index) => {
+                                student.id = Date.now() + index;
+                            });
+                            students = [...students, ...imported];
+                            saveStudents();
+                            alert('Sikeres importálás!');
+                        } else {
+                            alert('Érvénytelen JSON formátum!');
+                        }
+                    } catch (error) {
+                        alert('Hiba történt az importálás során: ' + error.message);
+                    }
+                    input.value = '';
+                    document.getElementById('fileName').textContent = 'Nincs fájl kiválasztva';
+                };
+                reader.readAsText(file);
+            }
+        }
+
+        renderStudents();
+    </script>
+</body>
+</html>
+
