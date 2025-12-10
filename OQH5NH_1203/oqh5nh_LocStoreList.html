@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OQH5NH Órarend JSON - Lista</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8e8e8;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .controls {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .controls-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .search-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-group label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .search-group input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 200px;
+        }
+
+        .search-group input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ora-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            border-left: 5px solid #3498db;
+        }
+
+        .ora-card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .ora-card .info-row {
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .ora-card .info-row strong {
+            color: #2c3e50;
+            margin-right: 5px;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-style: italic;
+            background: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OQH5NH Órarend JSON</h1>
+
+        <div class="controls">
+            <div class="controls-row">
+                <button class="btn" onclick="loadFromLocalStorage()">LocalStorage betöltése</button>
+            </div>
+            <div class="controls-row">
+                <div class="search-group">
+                    <label for="searchInput">Keresés tárgy szerint:</label>
+                    <input type="text" id="searchInput" placeholder="WebXML" oninput="searchOra()">
+                </div>
+            </div>
+        </div>
+
+        <div id="listContainer" class="list-container">
+            <!-- Dinamikusan töltődik -->
+        </div>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'orarend_data';
+        let orak = [];
+
+        async function loadJSONFile() {
+            try {
+                const response = await fetch('orarendoqh5nh.json');
+                if (!response.ok) {
+                    throw new Error('A fájl betöltése sikertelen!');
+                }
+                const data = await response.json();
+                if (data.TM_orarend && data.TM_orarend.ora) {
+                    orak = data.TM_orarend.ora;
+                    saveToLocalStorage();
+                    renderOrak();
+                } else {
+                    console.error('Érvénytelen JSON formátum!');
+                }
+            } catch (error) {
+                console.error('Hiba történt a fájl betöltése során: ' + error.message);
+                loadFromLocalStorage();
+            }
+        }
+
+        function loadFromLocalStorage() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                try {
+                    const data = JSON.parse(stored);
+                    if (data.TM_orarend && data.TM_orarend.ora) {
+                        orak = data.TM_orarend.ora;
+                        renderOrak();
+                        alert('Adatok betöltve a LocalStorage-ból!');
+                    } else {
+                        alert('Nincs érvényes adat a LocalStorage-ban!');
+                    }
+                } catch (error) {
+                    alert('Hiba történt a betöltés során: ' + error.message);
+                }
+            } else {
+                alert('Nincs mentett adat a LocalStorage-ban!');
+            }
+        }
+
+        function saveToLocalStorage() {
+            const data = {
+                TM_orarend: {
+                    ora: orak
+                }
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+
+        function searchOra() {
+            renderOrak();
+        }
+
+        function renderOrak() {
+            const container = document.getElementById('listContainer');
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            let filteredOrak = orak;
+            if (searchTerm) {
+                filteredOrak = orak.filter(ora => 
+                    ora.targy.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            if (filteredOrak.length === 0) {
+                container.innerHTML = '<div class="empty-message">Nincs megjeleníthető óra</div>';
+            } else {
+                container.innerHTML = filteredOrak.map(ora => `
+                    <div class="ora-card">
+                        <h2>${escapeHtml(ora.targy)}</h2>
+                        <div class="info-row">
+                            <strong>Nap:</strong> ${escapeHtml(ora.idopont.nap)}
+                        </div>
+                        <div class="info-row">
+                            <strong>Idő:</strong> ${ora.idopont.tol} - ${ora.idopont.ig}
+                        </div>
+                        <div class="info-row">
+                            <strong>Helyszín:</strong> ${escapeHtml(ora.helyszin)}
+                        </div>
+                        <div class="info-row">
+                            <strong>Oktató:</strong> ${escapeHtml(ora.oktató)}
+                        </div>
+                        <div class="info-row">
+                            <strong>Szak:</strong> ${escapeHtml(ora.szak)}
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            loadJSONFile();
+        });
+    </script>
+</body>
+</html>
+
